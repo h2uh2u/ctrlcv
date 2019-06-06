@@ -1,0 +1,30 @@
+<h1>Web Clipboard</h1>
+<hr/>
+
+<div>
+  <script>
+    window.onload = function() {
+      document.getElementById("urlbox").focus();
+    }
+
+    function gotoURL() {
+      var address = document.forms[0].elements['address'].value;
+      window.location = address.toLowerCase();
+      return false;
+    }
+  </script>
+        
+  <form onsubmit="return gotoURL();">
+    ctrl.cv/
+    <input 
+      type="text"
+      name="address"
+      id="urlbox"
+      pattern="[A-Za-z0-9]{1,32}"
+      minlength="1" maxlength="32"
+      autocomplete="off"
+      title="address should only contain 1~32 alphabets or numbers.">
+    <br/>
+    <input type="submit" value="Go">
+  </form>
+</div>
