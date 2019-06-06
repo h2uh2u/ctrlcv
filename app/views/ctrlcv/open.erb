@@ -1,0 +1,23 @@
+<h1>Web Clipboard</h1>
+<hr/>
+
+<div>
+  <script>
+    function copyText() {
+      var copyText = document.getElementById("output");
+      copyText.select();
+      document.execCommand("copy");
+    }
+  </script>
+  ctrl.cv/<%= @urls.url %>
+  <hr/>
+  <form method="post" action="/write/<%= @urls.url %>">
+    <textarea name="input" maxlength="65536"></textarea>
+    <br/>
+    <input type="submit" value="Enter">
+    <br/>
+    <textarea name="output" id="output" maxlength="65536" readonly><%= @urls.contents %></textarea>
+    <br/>
+    <button type="button" onclick="copyText()">Copy</button>
+  </form>
+</div>

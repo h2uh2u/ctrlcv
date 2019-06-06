@@ -4,4 +4,8 @@ class CtrlcvController < ApplicationController
     def main
         
     end
+    
+    def open
+        
+    end
 end
