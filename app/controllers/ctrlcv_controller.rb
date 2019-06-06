@@ -8,4 +8,10 @@ class CtrlcvController < ApplicationController
     def open
         @clipboard = Clipboard.find_or_create_by(address: params[:address])
     end
+    
+    def write
+        @clipboard = Clipboard.find_by(address: params[:address])
+        @clipboard.update(text: params[:input])
+        redirect_to action: 'open'
+    end
 end
