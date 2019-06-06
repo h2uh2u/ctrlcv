@@ -6,6 +6,6 @@ class CtrlcvController < ApplicationController
     end
     
     def open
-        
+        @clipboard = Clipboard.find_or_create_by(address: params[:address])
     end
 end

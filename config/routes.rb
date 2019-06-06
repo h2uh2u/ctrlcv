@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-    root 'home#main'
-    get '/:address', to: 'home#url', address: /[A-Za-z0-9]{1,32}/
+    root 'ctrlcv#main'
+    get '/:address', to: 'ctrlcv#open', address: /[A-Za-z0-9]{1,32}/
     get '/:address', to: redirect('/')
-    post '/write/:address', to: 'home#write'
+    post '/write/:address', to: 'ctrlcv#write'
 end
