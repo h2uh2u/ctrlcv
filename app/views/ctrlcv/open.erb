@@ -1,7 +1,23 @@
-<h1><a href="/">Web Clipboard</a></h1>
-<hr/>
+<header>
+  <a href="/"><%=image_tag 'clip.png', class:"img-fluid", id:'clip', alt:"" %></a>
+  <div class="help">
+    <%=image_tag 'info.png', class:"img-fluid", class:'info', alt:"" %>
+    <div class="help-text">
+        <p>URL을 입력하면 해당 URL에 대응되는 클립보드 페이지로 이동합니다.</p>
+        <p>클립보드 페이지에서 위쪽 텍스트 상자에 원하는 내용을 입력한 뒤,
+Enter 버튼을 누르면 텍스트가 저장됩니다.
+저장된 텍스트 내용은 아래쪽 텍스트 상자에 표시되며,
+Copy 버튼을 누르면 텍스트가 복사됩니다.</p>
+        <p>본 서비스는 회원가입 절차 없이 URL 접속만으로 복수의 기기 간 텍스트 복사가
+가능하도록 하기 위해 제작되었습니다.</p>
+        <p>단순 우연 또는 고의적 시도에 의해 입력한 URL에 제3자가 접근할 수도 있으며,
+해당 경우에 대해 본 서비스는 책임지지 않습니다.
+비밀번호나 중요한 개인정보 등 제3자에게 노출되면 안되는 내용은 입력하지 마십시오.</p>
+    </div>
+  </div>
+</header>
 
-<div>
+<div class="board">
   <script>
     function copyText() {
       var copyText = document.getElementById("output");
@@ -9,15 +25,14 @@
       document.execCommand("copy");
     }
   </script>
-  ctrl.cv/<%= @clipboard.address %>
-  <hr/>
+  <p>ctrl.cv/<%= @clipboard.address %></p>
   <form method="post" action="/write/<%= @clipboard.address %>">
-    <textarea name="input" maxlength="65536"></textarea>
+    <textarea name="input" id ="input" maxlength="65536"></textarea>
     <br/>
-    <input type="submit" value="Enter">
+    <input type="submit" value="Enter" id="enter">
     <br/>
     <textarea name="output" id="output" maxlength="65536" readonly><%= @clipboard.text %></textarea>
     <br/>
-    <button type="button" onclick="copyText()">Copy</button>
+    <button type="button" onclick="copyText()" id="copy">Copy</button>
   </form>
 </div>
