@@ -125,7 +125,7 @@ input:focus {
 }
 
 .notabene {
-  width: 45px;
+  width: 40px;
   margin-bottom: 15px;
 }
 
@@ -231,7 +231,7 @@ button:focus {
     height: 30px;
   }
   .comment {
-    margin: 80px auto;
+    margin: 20px auto;
     font-size: 10pt;
     width: 230px;
   }
