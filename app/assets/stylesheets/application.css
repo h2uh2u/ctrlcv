@@ -73,7 +73,7 @@ header {
   margin: 60px auto 40px auto;
   text-align: left;
   font-size: 15pt;
-  width: 500px;
+  width: 380px;
   color: #000000;
 }
 
@@ -84,7 +84,7 @@ header {
 	font-size: 15pt;
 	border: solid 1px #bababa;
 	border-radius: 5px;
-	width: 290px;
+	width: 240px;
 	margin-left: 10px
 }
 .url input[type="submit"] {
@@ -119,6 +119,7 @@ textarea {
 	height: 180px;
 	border: solid 1px #bababa;
 	border-radius: 5px;
+	resize: none;
 }
 
 textarea:focus {
@@ -165,4 +166,13 @@ button:focus {
 .bold {
   font-weight: bold;
   margin-left: 15px;
+}
+
+.comment {
+  clear: both;
+  margin: 50px auto auto auto;
+  text-align: center;
+  font-size: 10pt;
+  width: 500px;
+  color: #000000;
 }
