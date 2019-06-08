@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -69,6 +70,15 @@ header {
 }
 
 .url {
+  clear: both;
+  margin: 60px auto 40px auto;
+  text-align: left;
+  font-size: 15pt;
+  width: 500px;
+  color: #000000;
+}
+
+.url2 {
   clear: both;
   margin: 60px auto 40px auto;
   text-align: left;
@@ -165,4 +175,59 @@ button:focus {
 .bold {
   font-weight: bold;
   margin-left: 15px;
+}
+
+@media all and (max-width: 430px) and (min-width: 360px) {
+  body{
+    background-color: #ffffff;
+  }
+  header{
+    margin: 0 auto;
+  }
+  #clip{
+    height: 50px;
+    margin: 15px 20px;
+  }
+  .help {
+    float: right;
+    margin: 15px 20px;
+    text-align: justify;
+  }
+  .help .info {
+    height: 50px;
+  }
+  .url {
+    margin: 180px auto ;
+    font-size: 12pt;
+    width: 300px;
+    text-align: center;
+  }
+  .url input[type="text"] {
+    width: 200px;
+    text-align: left;
+    margin-left: 3px;
+  }
+  .url input[type="submit"] {
+    position: relative;
+    bottom: 0;
+    margin-top: 10px;
+    width: 50px;
+    border-radius: 25px;
+    height: 30px;
+  }
+  .url2 {
+    margin: 40px auto 20px auto;
+    font-size: 12pt;
+    width: 300px;
+    text-align: center;
+  }
+  .board {
+    width: 300px;
+  }
+  textarea {
+    width: 300px;
+  }
+  #enter {
+    margin-bottom: 20px;
+  }
 }
