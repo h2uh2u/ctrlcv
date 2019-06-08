@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,29 +25,28 @@ body {
 
 header {
  background-color: #ffffff;
- height: 100px;
+ height: 70px;
 }
 
 #clip {
-  height: 70px;
-  margin: 15px 30px;
-  text-align: center;
+  height: 50px;
+  margin: 10px 30px;
 }
 
 .help {
   float: right;
-  margin: 20px 40px;
+  margin: 10px 30px;
   text-align: justify;
 }
 
 .help .info {
-  height: 60px;
+  height: 50px;
 }
 
 .help .help-text {
   width: 250px;
   padding: 10px 0;
-  top: 120px;
+  top: 85px;
   right: 20px;
   font-size: 12px;
   color: #000000;
@@ -58,6 +56,8 @@ header {
   display: none;
   text-indent: 20px;
   line-height: 160%;
+  border-radius: 5px;
+  border: solid 1px #bababa;
 }
 
 .help:hover .help-text {
@@ -70,56 +70,51 @@ header {
 
 .url {
   clear: both;
-  text-align: center;
-  position: absolute; 
-  top: 50%;
-  width:100%;
-}
-
-
-.url form {
-	font-size: 30px;
-	color: #000000;
+  margin: 60px auto 40px auto;
+  text-align: left;
+  font-size: 15pt;
+  width: 500px;
+  color: #000000;
 }
 
 .url input[type="text"] {
-	font-size: 25px;
 	color: #000000;
-    background-color: #6dd5c3;
-	padding-left: 10px;
+  background-color: #6dd5c3;
+	padding-left: 5px;
+	font-size: 15pt;
+	border: solid 1px #bababa;
+	border-radius: 5px;
+	width: 290px;
+	margin-left: 10px
 }
 
 .url input[type="submit"] {
-  margin-left: 10px;
-  height: 35px;
-  width: 60px;
-  display: inline-block;
+  height: 25px;
+  width: 40px;
   position: relative;
   bottom: 2px;
+  left: 15px;
   border-radius: 5px;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 12pt;
   text-transform: uppercase;
+  border: solid 1px #bababa;
 }
 
 .board {
 	clear: both;
     text-align: center;
-    margin: 50px auto; 
+    margin: auto; 
     width:500px;
 }
 
-.board p {
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
 textarea {
-	font-size: 20px;
+	font-size: 12pt;
 	padding: 10px;
 	color: #000000;
 	width: 500px;
 	height: 180px;
+	border: solid 1px #bababa;
+	border-radius: 5px;
 }
 
 #input{
@@ -133,21 +128,26 @@ textarea {
 #copy {
 	border-radius: 5pt;
 	padding: 3pt;
-	font-weight: bold;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 	float: right;
 	width: 70pt;
 	height: 24pt;
 	text-transform: uppercase;
+	border: solid 1px #bababa;
 }
 
 #enter {
 	border-radius: 5pt;
 	padding: 3pt;
-	font-weight: bold;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 	float: right;
 	width: 70pt;
 	height: 24pt;
 	text-transform: uppercase;
+	border: solid 1px #bababa;
+}
+
+.bold {
+  font-weight: bold;
+  margin-left: 15px;
 }
