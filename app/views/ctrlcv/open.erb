@@ -1,7 +1,7 @@
 <header>
   <a href="/"><%=image_tag 'clip.png', class:"img-fluid", id:'clip', alt:"" %></a>
   <div class="help">
-    <%=image_tag 'info.png', class:"img-fluid", class:'info', alt:"" %>
+    <%=image_tag 'question.png', class:"img-fluid", class:'info', alt:"" %>
     <div class="help-text">
         <p>원하는 주소를 입력하면 해당 주소에 대응되는 클립보드 페이지로 이동합니다.</p>
         <p>주소는 1~16자리의 영문 또는 숫자로만 구성되어야 합니다.</p>
@@ -24,7 +24,8 @@ Copy 버튼을 누르면 텍스트가 복사됩니다.</p>
       document.execCommand("copy");
     }
   </script>
-  <p class="url">ctrl.cv /<span class="bold"><%= @clipboard.address %></span></p>
+
+  <p class="url2">ctrl.cv/<span class="bold"><%= @clipboard.address %></span></p>
   <form method="post" action="/write/<%= @clipboard.address %>">
     <textarea name="input" id ="input" maxlength="65536"></textarea>
     <br/>
