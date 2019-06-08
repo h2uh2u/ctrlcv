@@ -20,7 +20,7 @@
 }
 
 body {
-    background-color: #f9f9f9;
+    background-color: #f9f9fc;
 }
 
 header {
@@ -87,7 +87,6 @@ header {
 	width: 290px;
 	margin-left: 10px
 }
-
 .url input[type="submit"] {
   height: 25px;
   width: 40px;
@@ -98,6 +97,11 @@ header {
   font-size: 12pt;
   text-transform: uppercase;
   border: solid 1px #bababa;
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: 0px 0px 3px #000000;
 }
 
 .board {
@@ -117,6 +121,10 @@ textarea {
 	border-radius: 5px;
 }
 
+textarea:focus {
+  outline: 0;
+}
+
 #input{
     background-color: #6dd5c3;
 }
@@ -129,6 +137,7 @@ textarea {
 	border-radius: 5pt;
 	padding: 3pt;
 	margin-bottom: 40px;
+	margin-top: 5px;
 	float: right;
 	width: 70pt;
 	height: 24pt;
@@ -140,11 +149,17 @@ textarea {
 	border-radius: 5pt;
 	padding: 3pt;
 	margin-bottom: 40px;
+	margin-top: 5px;
 	float: right;
 	width: 70pt;
 	height: 24pt;
 	text-transform: uppercase;
 	border: solid 1px #bababa;
+}
+
+button:focus {
+  outline: 0;
+  box-shadow: 0px 0px 3px #000000;
 }
 
 .bold {
